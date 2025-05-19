@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbel ARF - Solusi Belajar Kreatif & Efektif</title>
+    <meta name="description" content="ARF adalah tempat bimbel terpercaya dengan fasilitas lengkap. Belajar aktif, kreatif, efektif dan menyenangkan.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo arf.jpg" type="image/x-icon">
+    <script defer>
+        // Gallery Filter Function
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const category = button.getAttribute('data-category');
+
+                    galleryItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="wrapper">
+            <div class="nav-container">
+                <a href="#home" class="logo">ARF</a>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Fasilitas</a></li>
+                        <li><a href="#programs">Program</a></li>
+                        <li><a href="#founder">Founder</a></li>
+                        <li><a href="#teacher">Pengajar</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#testimonials">Testimoni</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="wrapper">
+            <div class="hero-content">
+                <h1>ARF</h1>
+                <p class="subtitle">Solusi Belajar Aktif, Kreatif, Efektif & Menyenangkan</p>
+                <p>ARF adalah tempat bimbingan belajar terpercaya yang sudah memiliki cabang di Condet, Halim, dan pusatnya kini berada di Dukuh. Dengan fasilitas lengkap dan metode pembelajaran yang inovatif, kami siap membantu meningkatkan prestasi akademik Anda.</p>
+                <a href="#kontak" class="cta-button">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="wrapper">
+            <div class="section-title">
+                <p class="deskripsi">Mengapa Memilih ARF?</p>
+                <h2>Fasilitas & Keunggulan</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏫</div>
+                    <h3>Fasilitas Lengkap</h3>
+                    <p>Dilengkapi dengan meja, kursi yang nyaman, AC, dan TV untuk mendukung proses belajar yang optimal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Kelas Kecil</h3>
+                    <p>Pembelajaran dalam kelompok kecil untuk memastikan setiap siswa mendapat perhatian penuh.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Metode Kreatif</h3>
+                    <p>Pendekatan pembelajaran yang aktif, kreatif, dan menyenangkan untuk hasil yang efektif.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Terpercaya</h3>
+                    <p>Sudah dipercaya dengan cabang di berbagai lokasi strategis di Jakarta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="wrapper">
+            <div class="section-title">
+                <p class="deskripsi">Program Unggulan</p>
+                <h2>Program Belajar</h2>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h4>Program SD</h4>
+                    <ul>
+                        <li>Matematika</li>
+                        <li>Bahasa Indonesia</li>
+                        <li>IPA</li>
+                        <li>Bahasa Inggris</li>
+                        <li>Persiapan Ujian</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h4>Program SMP</h4>
+                    <ul>
+                        <li>Matematika</li>
+                        <li>IPA (Fisika, Kimia, Biologi)</li>
+                        <li>Bahasa Indonesia</li>
+                        <li>Bahasa Inggris</li>
+                        <li>Persiapan UNBK</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h4>Program SMA</h4>
+                    <ul>
+                        <li>Matematika (IPA/IPS)</li>
+                        <li>Fisika, Kimia, Biologi</li>
+                        <li>Bahasa Indonesia</li>
+                        <li>Bahasa Inggris</li>
+                        <li>Persiapan UTBK</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder">
+        <div class="wrapper">
+            <div class="section-title">
+                <p class="deskripsi">Pemilik ARF</p>
+                <h2>Pendiri & Visi</h2>
+            </div>
+            <div class="founder-content">
+                <div class="founder-text">
+                    <h3>Retno Tri (Bu Wiwit)</h3>
+                    <p>Retno Tri atau yang lebih dikenal dengan sebutan Bu Wiwit, merupakan seorang ibu rumah tangga yang berdedikasi tinggi dalam dunia pendidikan. Sebagai pemilik dan pendiri Bimbel ARF, beliau memiliki visi untuk menciptakan lingkungan belajar yang tidak hanya efektif dalam meningkatkan prestasi akademik, tetapi juga menyenangkan bagi para siswa.</p>
+                    <p style="margin-top: 1rem;">Dengan pengalaman bertahun-tahun di bidang pendidikan, Bu Wiwit berkomitmen untuk terus mengembangkan metode pembelajaran yang inovatif dan adaptif terhadap kebutuhan setiap siswa.</p>
+                </div>
+                <div class="founder-image">
+                    <img src="image/poto bu wiwit.jpg" alt="Bu Wiwit - Founder ARF">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teacher">
+        <div class="wrapper">
+            <div class="section-title">
+                <p class="deskripsi">Tim Pengajar</p>
+                <h2>Guru Berpengalaman</h2>
+                <p>Tim pengajar ARF terdiri dari guru-guru berpengalaman dan berdedikasi tinggi yang siap membimbing siswa mencapai prestasi terbaik.</p>
+            </div>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <img src="image/kak tondly.jpg" alt="Thondie Sunardie">
+                    <h4>Thondie Sunardie</h4>
+                    <p class="subject">Guru Matematika & IPA</p>
+                    <p>Spesialis dalam pembelajaran Matematika dan IPA dengan pendekatan yang mudah dipahami.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="image/kak reja.jpg" alt="Rowi Reza">
+                    <h4>Rowi Reza</h4>
+                    <p class="subject">Guru Bahasa & Sosial</p>
+                    <p>Ahli dalam Bahasa Indonesia, Bahasa Inggris, dan mata pelajaran sosial lainnya.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="image/8449776_3907915.jpg" alt="Guru ARF">
+                    <h4>Tim Pengajar Lainnya</h4>
+                    <p class="subject">Berbagai Mata Pelajaran</p>
+                    <p>Guru-guru berpengalaman yang siap membantu di berbagai mata pelajaran sesuai kebutuhan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="wrapper">
+            <div class="section-title">
+                <p class="deskripsi">Dokumentasi</p>
+                <h2>Gallery ARF</h2>
+                <p>Lihat suasana belajar yang menyenangkan dan fasilitas lengkap di Bimbel ARF</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-tabs">
+                    <button class="tab-btn active" data-category="all">Semua</button>
+                    <button class="tab-btn" data-category="facility">Fasilitas</button>
+                    <button class="tab-btn" data-category="activity">Kegiatan</button>
+                    <button class="tab-btn" data-category="event">Acara</button>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="facility">
+                        <img src="/api/placeholder/300/250" alt="Ruang Kelas ARF">
+                        <div class="gallery-overlay">
+                            <h4>Ruang Kelas</h4>
+                            <p>Ruang kelas ber-AC dengan fasilitas lengkap</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="facility">
+                        <img src="/api/placeholder/300/250" alt="Perpustakaan ARF">
+                        <div class="gallery-overlay">
+                            <h4>Perpustakaan</h4>
+                            <p>Koleksi buku dan bahan pembelajaran lengkap</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="activity">
+                        <img src="/api/placeholder/300/250" alt="Proses Belajar">
+                        <div class="gallery-overlay">
+                            <h4>Proses Belajar</h4>
+                            <p>Suasana belajar yang aktif dan interaktif</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="activity">
+                        <img src="/api/placeholder/300/250" alt="Diskusi Kelompok">
+                        <div class="gallery-overlay">
+                            <h4>Diskusi Kelompok</h4>
+                            <p>Pembelajaran kolaboratif antar siswa</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="event">
+                        <img src="/api/placeholder/300/250" alt="Try Out">
+                        <div class="gallery-overlay">
+                            <h4>Try Out</h4>
+                            <p>Simulasi ujian untuk persiapan UNBK/UTBK</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="event">
+                        <img src="/api/placeholder/300/250" alt="Wisuda">
+                        <div class="gallery-overlay">
+                            <h4>Wisuda</h4>
+                            <p>Perayaan kelulusan siswa berprestasi</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="facility">
+                        <img src="/api/placeholder/300/250" alt="Lab Komputer">
+                        <div class="gallery-overlay">
+                            <h4>Lab Komputer</h4>
+                            <p>Fasilitas pembelajaran digital</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="activity">
+                        <img src="/api/placeholder/300/250" alt="Presentasi">
+                        <div class="gallery-overlay">
+                            <h4>Presentasi</h4>
+                            <p>Siswa mempresentasikan hasil belajar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="wrapper">
+            <div class="section-title">
+                <p class="deskripsi">Apa Kata Mereka?</p>
+                <h2>Testimoni Siswa</h2>
+                <p>Dengarkan pengalaman siswa-siswa yang telah merasakan manfaat belajar di ARF</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/api/placeholder/80/80" alt="Sarah Putri">
+                            <div class="testimonial-info">
+                                <h4>Sarah Putri</h4>
+                                <p>Lulusan SMA, diterima di PTN</p>
+                                <div class="stars">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Alhamdulillah berkat bimbingan di ARF, nilai UN saya naik drastis dan berhasil diterima di PTN impian. Guru-gurunya sabar dan metode belajarnya mudah dipahami!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/api/placeholder/80/80" alt="Ahmad Rizki">
+                            <div class="testimonial-info">
+                                <h4>Ahmad Rizki</h4>
+                                <p>Siswa SMP, Juara Olimpiade</p>
+                                <div class="stars">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Di ARF, matematika yang tadinya susah jadi mudah. Pak Thondie cara ngajarnya asik banget! Sekarang saya bahkan juara olimpiade matematika tingkat kabupaten."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/api/placeholder/80/80" alt="Dewi Sartika">
+                            <div class="testimonial-info">
+                                <h4>Dewi Sartika</h4>
+                                <p>Orang Tua Siswa</p>
+                                <div class="stars">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Sebagai orang tua, saya sangat puas dengan ARF. Anak saya yang tadinya malas belajar sekarang jadi semangat. Bu Wiwit dan tim sangat perhatian dengan perkembangan anak."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/api/placeholder/80/80" alt="Budi Santoso">
+                            <div class="testimonial-info">
+                                <h4>Budi Santoso</h4>
+                                <p>Siswa SD, Ranking 1</p>
+                                <div class="stars">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Belajar di ARF itu seru! Gurunya baik-baik dan cara ngajarnya bikin aku ngerti. Sekarang aku ranking 1 di kelas!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/api/placeholder/80/80" alt="Lisa Maharani">
+                            <div class="testimonial-info">
+                                <h4>Lisa Maharani</h4>
+                                <p>Alumni SMA, Mahasiswa UI</p>
+                                <div class="stars">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"ARF bukan cuma tempat belajar, tapi juga tempat yang membentuk karakter. Saya belajar disiplin, kerja keras, dan pantang menyerah. Terima kasih ARF!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="/api/placeholder/80/80" alt="Andi Pratama">
+                            <div class="testimonial-info">
+                                <h4>Andi Pratama</h4>
+                                <p>Siswa SMP, Naik Kelas</p>
+                                <div class="stars">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Dulu nilai saya merah semua, hampir tidak naik kelas. Tapi berkat ARF, sekarang semua nilai saya hijau! Terima kasih Bu Wiwit dan semua guru ARF."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak">
+        <div class="wrapper">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Bimbel ARF</h3>
+                    <p>Tempat bimbingan belajar terpercaya yang menghadirkan solusi pembelajaran aktif, kreatif, efektif, dan menyenangkan untuk semua jenjang pendidikan.</p>
+                    <div class="social-links">
+                        <a href="#" title="WhatsApp">📱</a>
+                        <a href="#" title="Email">📧</a>
+                        <a href="#" title="Lokasi">📍</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Lokasi Cabang</h3>
+                    <div class="contact-info">
+                        <div><strong>Pusat - Dukuh:</strong><br>
+                        Jl. Dukuh Raya, Jakarta Timur</div>
+                        <div><strong>Cabang Condet:</strong><br>
+                        Jl. Condet Raya, Jakarta Timur</div>
+                        <div><strong>Cabang Halim:</strong><br>
+                        Jl. Halim Perdanakusuma, Jakarta Timur</div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Program</h3>
+                    <p>• Bimbingan Belajar SD<br>
+                    • Bimbingan Belajar SMP<br>
+                    • Bimbingan Belajar SMA<br>
+                    • Persiapan Ujian Nasional<br>
+                    • Persiapan UTBK-SBMPTN<br>
+                    • Les Privat</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hubungi Kami</h3>
+                    <div class="contact-info">
+                        <div>📞 Telepon: (021) xxx-xxxx</div>
+                        <div>📱 WhatsApp: 08xx-xxxx-xxxx</div>
+                        <div>📧 Email: info@bimbelarf.com</div>
+                        <div>⏰ Senin - Sabtu: 08:00 - 20:00</div>
+                        <div>⏰ Minggu: 08:00 - 17:00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Bimbel ARF. Semua hak cipta dilindungi undang-undang.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
